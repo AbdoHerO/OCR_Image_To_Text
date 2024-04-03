@@ -1,0 +1,685 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Maui.Graphics</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.Maui.Graphics.CanvasExtensions.FillArc(Microsoft.Maui.Graphics.ICanvas,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,Microsoft.Maui.Graphics.Paint,System.Boolean)">
+            <summary>
+            Fills the arc with the specified paint.  This is a helper method for when filling
+            an arc with a gradient, so that you don't need to worry about calculating the gradient
+            handle locations based on the rectangle size and location.
+            </summary>
+            <param name="canvas">canvas</param>
+            <param name="x">The x coordinate.</param>
+            <param name="y">The y coordinate.</param>
+            <param name="width">The rectangle width.</param>
+            <param name="height">The rectangle height</param>
+            <param name="startAngle">The start angle</param>
+            <param name="endAngle">The end angle</param>
+            <param name="paint">The paint</param>
+            <param name="clockwise">The direction to draw the arc</param>
+        </member>
+        <member name="M:Microsoft.Maui.Graphics.CanvasExtensions.DrawArc(Microsoft.Maui.Graphics.ICanvas,Microsoft.Maui.Graphics.RectF,System.Single,System.Single,System.Boolean,System.Boolean)">
+            <summary>
+            Draws the arc.  This is a helper method to draw an arc when you have a rectangle already defined
+            for the ellipse bounds.
+            </summary>
+            <param name="canvas">canvas</param>
+            <param name="bounds">The ellipse bounds.</param>
+            <param name="startAngle">The start angle</param>
+            <param name="endAngle">The end angle</param>
+            <param name="clockwise">The direction to draw the arc</param>
+            <param name="closed">If the arc is closed or not</param>
+        </member>
+        <member name="M:Microsoft.Maui.Graphics.CanvasExtensions.DrawArc(Microsoft.Maui.Graphics.ICanvas,Microsoft.Maui.Graphics.Rect,System.Single,System.Single,System.Boolean,System.Boolean)">
+            <summary>
+            Draws the arc.  This is a helper method to draw an arc when you have a rectangle already defined
+            for the ellipse bounds.
+            </summary>
+            <param name="canvas">canvas</param>
+            <param name="bounds">The ellipse bounds.</param>
+            <param name="startAngle">The start angle</param>
+            <param name="endAngle">The end angle</param>
+            <param name="clockwise">The direction to draw the arc</param>
+            <param name="closed">If the arc is closed or not</param>
+        </member>
+        <member name="M:Microsoft.Maui.Graphics.CanvasExtensions.FillArc(Microsoft.Maui.Graphics.ICanvas,Microsoft.Maui.Graphics.RectF,System.Single,System.Single,System.Boolean)">
+            <summary>
+            Fills the arc.  This is a helper method to fill an arc when you have a rectangle already defined
+            for the ellipse bounds.
+            </summary>
+            <param name="canvas">canvas</param>
+            <param name="bounds">The ellipse bounds.</param>
+            <param name="startAngle">The start angle</param>
+            <param name="endAngle">The end angle</param>
+            <param name="clockwise">The direction to draw the arc</param>
+        </member>
+        <member name="M:Microsoft.Maui.Graphics.CanvasExtensions.FillArc(Microsoft.Maui.Graphics.ICanvas,Microsoft.Maui.Graphics.Rect,System.Single,System.Single,System.Boolean)">
+            <summary>
+            Fills the arc.  This is a helper method to fill an arc when you have a rectangle already defined
+            for the ellipse bounds.
+            </summary>
+            <param name="canvas">canvas</param>
+            <param name="bounds">The ellipse bounds.</param>
+            <param name="startAngle">The start angle</param>
+            <param name="endAngle">The end angle</param>
+            <param name="clockwise">The direction to draw the arc</param>
+        </member>
+        <member name="M:Microsoft.Maui.Graphics.CanvasExtensions.EnableDefaultShadow(Microsoft.Maui.Graphics.ICanvas,System.Single)">
+            <summary>
+            Enables the default shadow.
+            </summary>
+            <param name="canvas">canvas</param>
+            <param name="zoom">Zoom.</param>
+        </member>
+        <member name="M:Microsoft.Maui.Graphics.CanvasExtensions.ResetStroke(Microsoft.Maui.Graphics.ICanvas)">
+            <summary>
+            Resets the stroke to the default settings:
+             - Stroke Size: 1
+             - Stroke Dash Pattern: None
+             - Stroke Location: Center
+             - Stroke Line Join: Miter
+             - Stroke Line Cap: Butt
+             - Stroke Brush: None
+             - Stroke Color: Black
+            </summary>
+            <param name="canvas">Canvas.</param>
+        </member>
+        <member name="T:Microsoft.Maui.Graphics.Colors">
+            <summary>
+            Represents all the system-defined colors.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.AliceBlue">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFF0F8FF</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.AntiqueWhite">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFAEBD7</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Aqua">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF00FFFF</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Aquamarine">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF7FFFD4</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Azure">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFF0FFFF</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Beige">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFF5F5DC</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Bisque">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFFE4C4</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Black">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF000000</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.BlanchedAlmond">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFFEBCD</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Blue">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF0000FF</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.BlueViolet">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF8A2BE2</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Brown">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFA52A2A</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.BurlyWood">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFDEB887</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.CadetBlue">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF5F9EA0</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Chartreuse">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF7FFF00</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Chocolate">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFD2691E</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Coral">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFF7F50</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.CornflowerBlue">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF6495ED</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Cornsilk">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFFF8DC</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Crimson">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFDC143C</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Cyan">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF00FFFF</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.DarkBlue">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF00008B</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.DarkCyan">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF008B8B</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.DarkGoldenrod">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFB8860B</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.DarkGray">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFA9A9A9</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.DarkGreen">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF006400</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.DarkGrey">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFA9A9A9</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.DarkKhaki">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFBDB76B</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.DarkMagenta">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF8B008B</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.DarkOliveGreen">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF556B2F</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.DarkOrange">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFF8C00</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.DarkOrchid">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF9932CC</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.DarkRed">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF8B0000</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.DarkSalmon">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFE9967A</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.DarkSeaGreen">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF8FBC8F</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.DarkSlateBlue">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF483D8B</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.DarkSlateGray">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF2F4F4F</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.DarkSlateGrey">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF2F4F4F</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.DarkTurquoise">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF00CED1</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.DarkViolet">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF9400D3</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.DeepPink">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFF1493</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.DeepSkyBlue">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF00BFFF</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.DimGray">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF696969</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.DimGrey">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF696969</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.DodgerBlue">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF1E90FF</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Firebrick">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFB22222</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.FloralWhite">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFFFAF0</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.ForestGreen">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF228B22</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Fuchsia">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFF00FF</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Gainsboro">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFDCDCDC</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.GhostWhite">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFF8F8FF</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Gold">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFFD700</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Goldenrod">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFDAA520</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Gray">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF808080</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Green">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF008000</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.GreenYellow">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFADFF2F</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Grey">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF808080</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Honeydew">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFF0FFF0</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.HotPink">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFF69B4</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.IndianRed">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFCD5C5C</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Indigo">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF4B0082</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Ivory">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFFFFF0</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Khaki">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFF0E68C</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Lavender">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFE6E6FA</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.LavenderBlush">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFFF0F5</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.LawnGreen">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF7CFC00</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.LemonChiffon">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFFFACD</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.LightBlue">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFADD8E6</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.LightCoral">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFF08080</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.LightCyan">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFE0FFFF</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.LightGoldenrodYellow">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFAFAD2</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.LightGray">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFD3D3D3</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.LightGreen">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF90EE90</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.LightGrey">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFD3D3D3</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.LightPink">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFFB6C1</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.LightSalmon">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFFA07A</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.LightSeaGreen">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF20B2AA</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.LightSkyBlue">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF87CEFA</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.LightSlateGray">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF778899</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.LightSlateGrey">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF778899</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.LightSteelBlue">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFB0C4DE</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.LightYellow">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFFFFE0</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Lime">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF00FF00</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.LimeGreen">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF32CD32</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Linen">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFAF0E6</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Magenta">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFF00FF</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Maroon">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF800000</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.MediumAquamarine">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF66CDAA</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.MediumBlue">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF0000CD</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.MediumOrchid">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFBA55D3</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.MediumPurple">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF9370D8</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.MediumSeaGreen">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF3CB371</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.MediumSlateBlue">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF7B68EE</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.MediumSpringGreen">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF00FA9A</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.MediumTurquoise">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF48D1CC</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.MediumVioletRed">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFC71585</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.MidnightBlue">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF191970</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.MintCream">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFF5FFFA</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.MistyRose">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFFE4E1</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Moccasin">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFFE4B5</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.NavajoWhite">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFFDEAD</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Navy">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF000080</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.OldLace">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFDF5E6</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Olive">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF808000</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.OliveDrab">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF6B8E23</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Orange">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFFA500</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.OrangeRed">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFF4500</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Orchid">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFDA70D6</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.PaleGoldenrod">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFEEE8AA</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.PaleGreen">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF98FB98</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.PaleTurquoise">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFAFEEEE</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.PaleVioletRed">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFD87093</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.PapayaWhip">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFFEFD5</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.PeachPuff">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFFDAB9</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Peru">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFCD853F</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Pink">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFFC0CB</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Plum">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFDDA0DD</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.PowderBlue">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFB0E0E6</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Purple">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF800080</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Red">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFF0000</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.RosyBrown">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFBC8F8F</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.RoyalBlue">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF4169E1</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.SaddleBrown">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF8B4513</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Salmon">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFA8072</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.SandyBrown">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFF4A460</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.SeaGreen">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF2E8B57</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.SeaShell">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFFF5EE</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Sienna">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFA0522D</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Silver">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFC0C0C0</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.SkyBlue">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF87CEEB</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.SlateBlue">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF6A5ACD</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.SlateGray">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF708090</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.SlateGrey">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF708090</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Snow">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFFFAFA</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.SpringGreen">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF00FF7F</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.SteelBlue">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF4682B4</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Tan">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFD2B48C</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Teal">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF008080</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Thistle">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFD8BFD8</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Tomato">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFF6347</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Transparent">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#00000000</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Turquoise">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF40E0D0</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Violet">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFEE82EE</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Wheat">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFF5DEB3</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.White">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFFFFFF</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.WhiteSmoke">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFF5F5F5</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.Yellow">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FFFFFF00</c>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Graphics.Colors.YellowGreen">
+            <summary>Gets the system-defined color that has an ARGB value of <c>#FF9ACD32</c>.</summary>
+        </member>
+        <member name="M:Microsoft.Maui.Graphics.GeometryUtil.EllipseAngleToPoint(System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Gets the point on an ellipse that corresponds to the given angle.
+            </summary>
+            <returns>The point.</returns>
+            <param name="x">The x position of the bounding rectangle.</param>
+            <param name="y">The y position of the bounding rectangle.</param>
+            <param name="width">The width of the bounding rectangle.</param>
+            <param name="height">The height of the bounding rectangle.</param>
+            <param name="angleInDegrees">Angle in degrees.</param>
+        </member>
+        <member name="M:Microsoft.Maui.Graphics.GeometryUtil.IsBetween(System.Single,System.Single,System.Single)">
+            Return true if c is between a and b.
+        </member>
+        <member name="M:Microsoft.Maui.Graphics.GeometryUtil.SameSide(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+             Check if two points are on the same side of a given line.
+             Algorithm from Sedgewick page 350.
+            
+             @param x0, y0, x1, y1  The line.
+             @param px0, py0        First point.
+             @param px1, py1        Second point.
+             @return                &lt;0 if points on opposite sides.
+                                    =0 if one of the points is exactly on the line
+                                    &gt;0 if points on same side.
+        </member>
+        <member name="M:Microsoft.Maui.Graphics.GeometryUtil.IsLineIntersectingLine(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+             Check if two line segments intersects. Integer domain.
+            
+             @param x0, y0, x1, y1  End points of first line to check.
+             @param x2, yy, x3, y3  End points of second line to check.
+             @return                True if the two lines intersects.
+        </member>
+        <member name="P:Microsoft.Maui.Graphics.Insets.Horizontal">
+            <summary>
+            The sum of the left and right insets.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Graphics.Insets.Vertical">
+            <summary>
+            The sum of the top and bottom insets.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Graphics.InsetsF.Horizontal">
+            <summary>
+            The sum of the left and right insets.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Graphics.InsetsF.Vertical">
+            <summary>
+            The sum of the top and bottom insets.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Maui.Graphics.Matrix3x2Extensions.CreateMatrix3x2(System.Numerics.Vector2,System.Single,System.Numerics.Vector2)">
+            <summary>
+            Creates a matrix from an SRT.
+            </summary>
+            <param name="scale">The scale</param>
+            <param name="rotation">The rotation, in radians</param>
+            <param name="translation">the translation</param>
+            <returns>A Matrix3x2</returns>
+            <remarks>
+            This is equivalent to:<br/>
+            <c>
+            m = Matrix3x2.CreateScale(scale)<br/>
+            m *= Matri3x2.CreateRotation(rotation)<br/>
+            m *= Matri3x2.CreateTranslation(translation)<br/>
+            </c>		
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Maui.Graphics.PathArcExtensions.ComputeSvgArc(System.Single,System.Single,System.Single,System.Boolean,System.Boolean,System.Single,System.Single,System.Single,System.Single)">
+             Converts a svg arc specification to a Degrafa arc.
+            
+        </member>
+        <member name="M:Microsoft.Maui.Graphics.PathArcExtensions.DrawArc(Microsoft.Maui.Graphics.PathF,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+             Draws an arc of type "open" only. Accepts an optional x axis rotation value
+            
+        </member>
+        <member name="T:ThisAssembly">
+            <summary>Provides access to the current assembly information.</summary>
+        </member>
+        <member name="T:ThisAssembly.Git">
+            <summary>Provides access to the git information for the current assembly.</summary>
+        </member>
+        <member name="F:ThisAssembly.Git.IsDirty">
+            <summary>IsDirty: true</summary>
+        </member>
+        <member name="F:ThisAssembly.Git.IsDirtyString">
+            <summary>IsDirtyString: true</summary>
+        </member>
+        <member name="F:ThisAssembly.Git.RepositoryUrl">
+            <summary>Repository URL: https://github.com/dotnet/maui</summary>
+        </member>
+        <member name="F:ThisAssembly.Git.Branch">
+            <summary>Branch: 8.0.1xx</summary>
+        </member>
+        <member name="F:ThisAssembly.Git.Commit">
+            <summary>Commit: 1ebb238ff3</summary>
+        </member>
+        <member name="F:ThisAssembly.Git.Sha">
+            <summary>Sha: 1ebb238ff313b626fe40e33fb52bdf13697ede5c</summary>
+        </member>
+        <member name="F:ThisAssembly.Git.CommitDate">
+            <summary>Commit date: 2023-11-07T20:09:06+00:00</summary>
+        </member>
+        <member name="F:ThisAssembly.Git.Commits">
+            <summary>Commits on top of base version: 2</summary>
+        </member>
+        <member name="F:ThisAssembly.Git.Tag">
+            <summary>Tag: </summary>
+        </member>
+        <member name="F:ThisAssembly.Git.BaseTag">
+            <summary>Base tag: </summary>
+        </member>
+        <member name="T:ThisAssembly.Git.BaseVersion">
+            <summary>Provides access to the base version information used to determine the <see cref="T:ThisAssembly.Git.SemVer" />.</summary>      
+        </member>
+        <member name="F:ThisAssembly.Git.BaseVersion.Major">
+            <summary>Major: 8</summary>
+        </member>
+        <member name="F:ThisAssembly.Git.BaseVersion.Minor">
+            <summary>Minor: 0</summary>
+        </member>
+        <member name="F:ThisAssembly.Git.BaseVersion.Patch">
+            <summary>Patch: 1</summary>
+        </member>
+        <member name="T:ThisAssembly.Git.SemVer">
+            <summary>Provides access to SemVer information for the current assembly.</summary>
+        </member>
+        <member name="F:ThisAssembly.Git.SemVer.Major">
+            <summary>Major: 8</summary>
+        </member>
+        <member name="F:ThisAssembly.Git.SemVer.Minor">
+            <summary>Minor: 0</summary>
+        </member>
+        <member name="F:ThisAssembly.Git.SemVer.Patch">
+            <summary>Patch: 3</summary>
+        </member>
+        <member name="F:ThisAssembly.Git.SemVer.Label">
+            <summary>Label: </summary>
+        </member>
+        <member name="F:ThisAssembly.Git.SemVer.DashLabel">
+            <summary>Label with dash prefix: </summary>
+        </member>
+        <member name="F:ThisAssembly.Git.SemVer.Source">
+            <summary>Source: File</summary>
+        </member>
+    </members>
+</doc>
