@@ -10,7 +10,7 @@ import numpy as np
 # print(result)
 
 # read image
-image_path = 'data/denoise_mod02_resized.jpg'
+image_path = '../data/denoise_mod02_resized.jpg'
 
 img = cv2.imread(image_path)
 

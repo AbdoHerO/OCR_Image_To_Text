@@ -21,7 +21,7 @@ import pytesseract as tess
 tess.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 # Open the image
-image = Image.open('data/denoise_mod02_resized.jpg')
+image = Image.open('../data/denoise_mod02_resized.jpg')
 
 # Extract text from the image
 text = image_to_string(image)
@@ -30,7 +30,7 @@ text = image_to_string(image)
 text_lines = text.split('\n')
 
 # Print and write each line to a file with line breaks
-with open('output.txt', 'w') as file:
+with open('../output_results/output.txt', 'w') as file:
     for line in text_lines:
         print(line)
         file.write(line + '\n')

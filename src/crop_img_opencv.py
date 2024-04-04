@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img = cv2.imread('data/denoise_mod01.jpg')
+img = cv2.imread('../data/denoise_mod01.jpg')
 img_dup = np.copy(img)
 mouse_pressed = False
 # defining starting and ending point of rectangle (crop image region)
@@ -41,7 +41,7 @@ while True:
             # image = img[starting_y:ending_y, starting_x:ending_x]
             # img_dup = np.copy(image)
             cropped_image = img[starting_y:ending_y, starting_x:ending_x]
-            cv2.imwrite('output_cropped/cropped_image.jpg', cropped_image)  # Save cropped image
+            cv2.imwrite('../output_results/cropped_image.jpg', cropped_image)  # Save cropped image
             img_dup = np.copy(cropped_image)  # Update display with cropped image
         elif k == 27:
             break

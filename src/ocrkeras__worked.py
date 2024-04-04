@@ -25,7 +25,7 @@ print("TensorFlow Version:", tf.__version__)
 # Pass the local path of the image to the pipeline
 pipeline = keras_ocr.pipeline.Pipeline()
 results = pipeline.recognize(
-    ['data/denoise_mod01_resized.jpg'],  # Pass the local path here
+    ['../data/denoise_mod01_resized.jpg'],  # Pass the local path here
     # ['image.jpg'],  # Pass the local path here
     # Uncomment the next lines to see messier results
     # detection_kwargs={
@@ -45,7 +45,7 @@ print(df.head())
 if results:
     # Code to display image with bounding boxes
     fig, ax = plt.subplots(figsize=(10, 10))
-    keras_ocr.tools.drawAnnotations(plt.imread('image.jpg'), results[0], ax=ax)
+    keras_ocr.tools.drawAnnotations(plt.imread('../data/denoise_mod01_resized.jpg'), results[0], ax=ax)
     ax.set_title('Keras OCR Result Example')
     plt.show()
 else:

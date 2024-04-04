@@ -14,14 +14,14 @@ import urllib.request  # Import the module for downloading files
 
 # !https://rachidcosm.dorimy.com/public/uploads/all/bmISH4HLJMax2gDU07ZLzvyFtbZxhGJGNRM4SEX9.jpg -O /content/simple_test.jpg
 
-# URL of the image
-url = 'https://rachidcosm.dorimy.com/public/uploads/all/QU9asMLYL9lXRtYVB3DHxSOkOhrxxTIiLQVVx8P2.jpg'
+# # URL of the image
+# url = 'https://rachidcosm.dorimy.com/public/uploads/all/QU9asMLYL9lXRtYVB3DHxSOkOhrxxTIiLQVVx8P2.jpg'
+#
+# # Download the image from the URL and save it locally
+# urllib.request.urlretrieve(url, 'image_test.jpg')
 
-# Download the image from the URL and save it locally
-urllib.request.urlretrieve(url, 'image_test.jpg')
 
-
-img_path = 'image_test.jpg'
+img_path = '../data/denoise_mod01_resized.jpg'
 
 img = cv2.imread(img_path, cv2.IMREAD_UNCHANGED)
 cv2_imshow(img)
@@ -35,7 +35,7 @@ from PIL import Image, ImageDraw, ImageFont
 import numpy as np
 
 # Load the input image
-img_path = 'image_test.jpg'
+img_path = '../data/denoise_mod01_resized.jpg'
 image = Image.open(img_path).convert('RGB')
 
 # Extract bounding box coordinates, text, and confidence score from the result
@@ -58,10 +58,10 @@ for box, text, score in zip(boxes, texts, scores):
     draw.text((box[0][0][0], box[0][0][1] - 10), f"{text} ({score:.2f})", fill='red', font=font)
 
 # Save the result image
-output_path = 'result.jpg'
+output_path = '../output_results/result_orc_paddle.jpg'
 image.save(output_path)
 
 # Display the
-result_path = 'result.jpg'
+result_path = '../output_results/result_orc_paddle.jpg'
 result_img = cv2.imread(result_path, cv2.IMREAD_UNCHANGED)
 cv2_imshow(result_img)
