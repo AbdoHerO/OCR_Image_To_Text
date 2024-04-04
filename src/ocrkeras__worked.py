@@ -3,13 +3,14 @@
 
 import matplotlib.pyplot as plt
 import glob
+import keras
 import keras_ocr
 import tensorflow as tf
 
 import urllib.request  # Import the module for downloading files
 
 # Print the version of keras_ocr
-print("Keras-OCR Version:", keras_ocr.__version__)
+print("Keras-OCR Version:", keras.__version__)
 
 # Print the version of TensorFlow
 print("TensorFlow Version:", tf.__version__)

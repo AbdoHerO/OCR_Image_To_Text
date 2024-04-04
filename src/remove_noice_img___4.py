@@ -42,6 +42,9 @@ cv2.imshow('Original Image', img)
 cv2.imshow('Sharpened ___', sharpened___)
 cv2.imshow('Processed Image', binary)
 
+cv2.imwrite('../output_results/binary.jpg', binary)
+
+
 
 
 # *--------------------------------------------------------* Step 2 *--------------------------------------------------------*
