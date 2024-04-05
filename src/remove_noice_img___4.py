@@ -5,7 +5,7 @@ import numpy as np
 # *--------------------------------------------------------* Step 1 *--------------------------------------------------------*
 
 #Reading the image
-img = cv2.imread('../data/mod02.jpg')
+img = cv2.imread('../data/mod01.jpg')
 
 
         # //  -------------- binary image ------------------ *

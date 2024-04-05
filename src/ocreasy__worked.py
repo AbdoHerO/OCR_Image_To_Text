@@ -10,7 +10,9 @@ import numpy as np
 # print(result)
 
 # read image
-image_path = '../data/denoise_mod01_resized.jpg'
+image_path ='../data/mod01_croped_binary.jpg'
+# image_path ='../data/mod01_croped.jpg'
+# image_path ='../data/denoise_mod01_resized.jpg'
 
 img = cv2.imread(image_path)
 
@@ -33,3 +35,13 @@ for t_, t in enumerate(text_):
 
 plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
 plt.show()
+
+
+# Extract text and store it in a variable
+extracted_text = '\n'.join([t[1] for t in text_])
+
+# Export the extracted text to a text file
+with open('../output_results/output_easyocr.txt', 'w') as text_file:
+    text_file.write(extracted_text)
+
+print("Text extracted from the image has been exported to output.txt file.")

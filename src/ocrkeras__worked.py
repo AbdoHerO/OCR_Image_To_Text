@@ -6,6 +6,8 @@ import glob
 import keras
 import keras_ocr
 import tensorflow as tf
+import json
+import os
 
 import urllib.request  # Import the module for downloading files
 
@@ -51,3 +53,72 @@ if results:
     plt.show()
 else:
     print("No text detected in the image.")
+
+
+# __START__ Export the text extracted from OCR to a text file (output.txt) and a JSON file (output.json) --- **Words**
+
+# # Convert numpy arrays in results to lists
+# results_serializable = []
+# for entry in results[0]:
+#     text = entry[0]
+#     bbox = entry[1].tolist()  # Convert bounding box ndarray to list
+#     entry_serializable = {'text': text, 'bbox': bbox}
+#     results_serializable.append(entry_serializable)
+#
+# # Convert the OCR results to JSON
+# json_results = json.dumps(results_serializable)
+#
+# # Export the JSON results to a file
+# with open('output.json', 'w') as json_file:
+#     json_file.write(json_results)
+#
+# # Extract text from OCR results
+# text = '\n'.join([entry[0] for entry in results[0]])
+#
+# # Export the extracted text to a text file
+# with open('output.txt', 'w') as text_file:
+#     text_file.write(text)
+#
+# # Additional information for confirmation
+# print("Text extracted from OCR has been exported to output.txt and output.json files.")
+
+# __END__ Export the text extracted from OCR to a text file (output.txt) and a JSON file (output.json) --- **Words**
+
+
+
+
+# __START__ Export the text extracted from OCR to a text file (output.txt) and a JSON file (output.json) --- **Sentences**
+
+# Combine words into sentences
+sentences = []
+current_sentence = ''
+for entry in results[0]:
+    word = entry[0]
+    if word.endswith(('.', '!', '?')):  # Check if the word ends with punctuation indicating end of sentence
+        current_sentence += word + ' '  # Add word to current sentence
+        sentences.append(current_sentence.strip())  # Add complete sentence to list
+        current_sentence = ''  # Reset current sentence
+    else:
+        current_sentence += word + ' '  # Add word to current sentence
+
+# If there's any remaining text in current sentence, add it as well
+if current_sentence:
+    sentences.append(current_sentence.strip())
+
+# Combine sentences into a single string
+text = '\n'.join(sentences)
+
+# Export the extracted text to a text file
+with open('output_sentences.txt', 'w') as text_file:
+    text_file.write(text)
+
+# Additional information for confirmation
+print("Text extracted from OCR has been exported to output_sentences.txt file.")
+
+# __END__ Export the text extracted from OCR to a text file (output.txt) and a JSON file (output.json) --- **Sentences**
+
+
+# # Download the files to local machine
+# from google.colab import files
+# files.download('output.json')
+# files.download('output.txt')
