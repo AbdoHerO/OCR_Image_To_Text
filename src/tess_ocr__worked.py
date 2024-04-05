@@ -8,8 +8,8 @@ from reportlab.pdfgen import canvas
 tess.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 # Open the image
-# image = Image.open('../data/mod01.jpg')
-image = Image.open('../output_results/sharpened_image_cpd01_croped.jpg')
+image = Image.open('../data/new_bl.jpg')
+# image = Image.open('../output_results/sharpened_image_cpd01_croped.jpg')
 
 # Extract text from the image
 text = image_to_string(image)
