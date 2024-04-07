@@ -4,16 +4,13 @@
 import matplotlib.pyplot as plt
 import glob
 import keras_ocr
-import tensorflow as tf
 
 import urllib.request  # Import the module for downloading files
 
 # Print the version of keras_ocr
 print("Keras-OCR Version:", keras_ocr.__version__)
 
-# Print the version of TensorFlow
-print("TensorFlow Version:", tf.__version__)
-#
+
 
 # # URL of the image
 # url = 'https://rachidcosm.dorimy.com/public/uploads/all/8YveznMtmVQdT9J3WB9BymsPbM58qEpcfWH5OEHq.jpg'
