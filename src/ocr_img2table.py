@@ -2,7 +2,8 @@ from img2table.document import PDF
 from img2table.ocr import TesseractOCR
 
 # Instantiation of the pdf
-pdf = PDF(src="../data/mod01.pdf")
+# pdf = PDF(src="../data/mod01.pdf")
+pdf = PDF(src="../data/new_bl.pdf")
 
 # Instantiation of the OCR, Tesseract, which requires prior installation
 ocr = TesseractOCR(lang="eng")
