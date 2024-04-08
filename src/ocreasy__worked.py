@@ -10,7 +10,7 @@ import numpy as np
 # print(result)
 
 # read image
-image_path ='../data/mod01_croped_binary.jpg'
+image_path ='../data/new_bl_croped.jpg'
 # image_path ='../data/mod01_croped.jpg'
 # image_path ='../data/denoise_mod01_resized.jpg'
 

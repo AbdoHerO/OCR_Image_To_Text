@@ -13,3 +13,5 @@ keras-ocr
 pymupdf
 PdfReader
 pdfplumber
+asprise_ocr_api
+urllib
