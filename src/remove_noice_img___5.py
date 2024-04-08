@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 #Reading a image from computer and taking dimensions
-img = cv2.imread('../data/mod02.jpg')
+img = cv2.imread('../data/new_bl_croped.jpg')
 rows, cols = img.shape[:2]
 
 #Kernel Bluerring using filter2D()

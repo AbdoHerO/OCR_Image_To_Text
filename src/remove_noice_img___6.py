@@ -2,7 +2,7 @@
 import cv2
 
 #Reading the image
-img = cv2.imread('../data/mod01.jpg')
+img = cv2.imread('../data/new_bl_croped.jpg')
 img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 # img = cv2.resize(img, (20, 900))
 

@@ -1,0 +1,176 @@
+Client\n ش.م. للتوزيع الصيدلية الشركة\n
+SOPHADIM S.A\n SOCIETE PHARMACEUTIQUE DE REPARTITION S.A    SPR  14 Zangat Immouzzar Al Kandar\n
+CASABLANCA Maroc\n    Siège Social: Lot. 89 Z.I. My. Rachid-CASABLANCA\n
+N TEL 522448877\n   Tél.: 05.22.71.33.33 L.G-05.22.71.33.44/45\n
+
+N Patente 32501079\n    Fax 05.22.71.33.46\n    BON DE LIVRAISON  CACHET\n    Messages\n
+CLIENT BL. Numéro   DATE     Page\n
+23/09/2013  1/1\n  Réf. 03/2    CLG0000037   LC2013-DD7673\n  Quantité     Quantité\n   Désignation P.P.M.  LOT\n Commandée Livrée
+Date péremption\n   
+COMPRIMES.CP EFFER, GELULES\n 14 CARBOFLORE BT/30GLLES    0,00 1012030    03/10/2015\n
+72 72    CARBOFLORE BT/30GLLES  69,00 1012030    03/10/2015\n
+96    96   DIGESTAL BT/30CPS     69,00 1210121D     01/02/2015\n
+19 DIGESTAL BT/30CPS  0,00 1210121D     01/02/2015\n
+12 12 FORTIVISION BT/30DG    190,00 L1003F   01/08/2015\n
+48 48    MENOPHYT BT/30CPS 69.00 0912127    07/10/2015\n
+MENOPHYT BT/30CPS 0,00 0812127  07/10/2015\n
+120   120    SHEN-QI BTE 10 AMP BUV 10ML     110,00  12/798   01/10/2015\n
+24   SHEN-QI BTE 10 AMP BUV 10ML    0,00 12/788    01/10/2015\n
+120  120   SUPERFORM 10 CP ORANGE   40,00 L2200520    02/04/2015\n
+480    480   SUPERFORM 20 CP ORANGE 69.00  L2200504  03/12/2015\n
+96  SUPERFORM 20 CP ORANGE 0.00 L2200504   03/12/2015\n
+360    360   VITAMAG GM   88.00 L2200030    04/03/2015\n
+72  VITAMAG GM   0,00 L2200030   04/03/2015\n
+48   48 VITAMAG MAG-300MG STIKS  89,00 L22006   01/10/2015\n
+R\n    VITAMAG MAG 300MG STIKS   0,00 L22008   01/10/2015\n
+120  120   VITAMAG PM   48,00 L2200027    05/03/2015\n
+24  VITAMAG PM     0,00 L2200027    05/03/2015\n
+Société Anonyme au capitale de 21.000.000 DHS-Patente: 32790660-R.C. 85261-C.N.S.S 2602812-Ident. Fisc. 02820530\n
+Scanné avec CamScanner
+
+
+
+
+
+
+{
+    "ocr_type" : "receipts",
+    "request_id" : "P_102.50.240.189_luqrfaz2_y5p",
+    "ref_no" : "test",
+    "file_name" : "new_bl.pdf",
+    "request_received_on" : 1712569100366,
+    "success" : true,
+    "image_width" : 1652,
+    "image_height" : 2338,
+    "image_rotation" : 0,
+    "recognition_completed_on" : 1712569101953,
+    "receipts" : [ {
+      "merchant_name" : "14 Zangat Immouzzar Al Kandar CASABLANCA Maroc",
+      "merchant_address" : "Siège Social: Lot. 89 Z.I. My. Rachid-CASABLANCA",
+      "merchant_phone" : "+33 5 22 71 33 33",
+      "merchant_website" : null,
+      "merchant_tax_reg_no" : null,
+      "merchant_company_reg_no" : null,
+      "region" : null,
+      "mall" : null,
+      "country" : "FR",
+      "receipt_no" : null,
+      "date" : "2013-09-23",
+      "time" : null,
+      "items" : [ {
+        "amount" : null,
+        "category" : null,
+        "description" : "Fax",
+        "flags" : "",
+        "qty" : null,
+        "remarks" : null,
+        "tags" : null,
+        "unitPrice" : null
+      } ],
+      "currency" : "EUR",
+      "total" : 190.00,
+      "subtotal" : null,
+      "tax" : null,
+      "service_charge" : null,
+      "tip" : null,
+      "payment_method" : null,
+      "payment_details" : null,
+      "credit_card_type" : null,
+      "credit_card_number" : null,
+      "ocr_text" : "                                                                                     Client\n ش.م. للتوزيع الصيدلية الشركة\n                                                                  SOPHADIM S.A\n SOCIETE PHARMACEUTIQUE DE REPARTITION S.A        SPR             14 Zangat Immouzzar Al Kandar\n                                                                  CASABLANCA Maroc\n    Siège Social: Lot. 89 Z.I. My. Rachid-CASABLANCA\n                                                                  N TEL 522448877\n        Tél.: 05.22.71.33.33 L.G-05.22.71.33.44/45\n                                                                  N Patente 32501079\n                Fax 05.22.71.33.46\n                               BON DE LIVRAISON                                      CACHET\n                 Messages\n                                                                    CLIENT BL. Numéro         DATE       Page\n                                                                                          23/09/2013      1/1\n  Réf. 03/2                                              CLG0000037       LC2013-DD7673\n  Quantité     Quantité\n                                         Désignation                     P.P.M.         LOT\n Commandée      Livrée                                                                            Date péremption\n                             COMPRIMES.CP EFFER, GELULES\n                     14 CARBOFLORE BT/30GLLES                               0,00 1012030            03/10/2015\n       72           72    CARBOFLORE BT/30GLLES                             69,00 1012030           03/10/2015\n       96           96   DIGESTAL BT/30CPS                                  69,00 1210121D          01/02/2014\n                    19 DIGESTAL BT/30CPS                                     0,00 1210121D          01/02/2014\n       12           12 FORTIVISION BT/30DG                                 190,00 L1003F            01/08/2014\n       48           48    MENOPHYT BT/30CPS                                 69.00 0912127           07/10/2015\n                         MENOPHYT BT/30CPS                                   0,00 0812127           07/10/2015\n      120          120    SHEN-QI BTE 10 AMP BUV 10ML                      110,00  12/798           01/10/2015\n                    24   SHEN-QI BTE 10 AMP BUV 10ML                        0,00 12/788             01/10/2015\n      120          120   SUPERFORM 10 CP ORANGE                            40,00 L2200520           02/04/2015\n      480          480   SUPERFORM 20 CP ORANGE                            69.00  L2200504          03/12/2014\n                     96  SUPERFORM 20 CP ORANGE                              0.00 L2200504          03/12/2014\n      360          360   VITAMAG GM                                        88.00 L2200030           04/03/2015\n                     72  VITAMAG GM                                          0,00 L2200030          04/03/2015\n       48           48 VITAMAG MAG-300MG STIKS                              89,00 L22006            01/10/2014\n                                                    R\n                         VITAMAG MAG 300MG STIKS                             0,00 L22008            01/10/2014\n      120          120   VITAMAG PM                                        48,00 L2200027           05/03/2015\n                     24  VITAMAG PM                                          0,00 L2200027          05/03/2015\n  Société Anonyme au capitale de 21.000.000 DHS-Patente: 32790660-R.C. 85261-C.N.S.S 2602812-Ident. Fisc. 02820530\n                                                                                       Scanné avec CamScanner",
+      "ocr_confidence" : 95.70,
+      "width" : 1572,
+      "height" : 2261,
+      "avg_char_width" : 13.682,
+      "avg_line_height" : 22.431,
+      "conf_amount" : 79,
+      "source_locations" : {
+        "date" : [ [ {
+          "x" : 1261,
+          "y" : 649
+        }, {
+          "x" : 1380,
+          "y" : 646
+        }, {
+          "x" : 1380,
+          "y" : 664
+        }, {
+          "x" : 1261,
+          "y" : 667
+        } ] ],
+        "merchant_name" : [ [ {
+          "x" : 926,
+          "y" : 115
+        }, {
+          "x" : 1314,
+          "y" : 112
+        }, {
+          "x" : 1314,
+          "y" : 139
+        }, {
+          "x" : 926,
+          "y" : 142
+        } ], [ {
+          "x" : 932,
+          "y" : 143
+        }, {
+          "x" : 1192,
+          "y" : 143
+        }, {
+          "x" : 1192,
+          "y" : 167
+        }, {
+          "x" : 932,
+          "y" : 167
+        } ] ],
+        "doc" : [ [ {
+          "x" : -39,
+          "y" : -74
+        }, {
+          "x" : 1689,
+          "y" : -74
+        }, {
+          "x" : 1689,
+          "y" : 2412
+        }, {
+          "x" : -39,
+          "y" : 2412
+        } ] ],
+        "merchant_address" : [ [ {
+          "x" : 71,
+          "y" : 162
+        }, {
+          "x" : 633,
+          "y" : 162
+        }, {
+          "x" : 633,
+          "y" : 184
+        }, {
+          "x" : 71,
+          "y" : 184
+        } ] ],
+        "merchant_phone" : [ [ {
+          "x" : 193,
+          "y" : 190
+        }, {
+          "x" : 342,
+          "y" : 190
+        }, {
+          "x" : 342,
+          "y" : 211
+        }, {
+          "x" : 193,
+          "y" : 211
+        } ] ]
+      }
+    } ]
+  }
+
+
+
+
+
+
+
+
+

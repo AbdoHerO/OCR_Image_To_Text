@@ -53,26 +53,34 @@ else:
     print("No text detected in the image.")
 
 
+
+
+
+
 # __START__ Export the text extracted from OCR to a text file (output.txt) and a JSON file (output.json) --- **Words**
 
-# Convert numpy arrays in results to lists
-results_serializable = []
-for entry in results[0]:
-    text = entry[0]
-    bbox = entry[1].tolist()  # Convert bounding box ndarray to list
-    entry_serializable = {'text': text, 'bbox': bbox}
-    results_serializable.append(entry_serializable)
-
-# Convert the OCR results to JSON
-json_results = json.dumps(results_serializable)
 
 
 
 
+# # Convert numpy arrays in results to lists
+# results_serializable = []
+# for entry in results[0]:
+#     text = entry[0]
+#     bbox = entry[1].tolist()  # Convert bounding box ndarray to list
+#     entry_serializable = {'text': text, 'bbox': bbox}
+#     results_serializable.append(entry_serializable)
+#
+# # Convert the OCR results to JSON
+# json_results = json.dumps(results_serializable)
+#
+# # Export the JSON results to a file
+# with open('output.json', 'w') as json_file:
+#     json_file.write(json_results)
+#
 
-# Export the JSON results to a file
-with open('output.json', 'w') as json_file:
-    json_file.write(json_results)
+
+
 #
 # # Extract text from OCR results
 # text = '\n'.join([entry[0] for entry in results[0]])
@@ -83,28 +91,28 @@ with open('output.json', 'w') as json_file:
 
 
 # Extract text from OCR results and concatenate into sentences
-sentences = []
-current_sentence = ''
-for entry in results[0]:
-    word = entry[0]
-    # Check if the word is a space
-    if word == ' ':
-        current_sentence += word
-    else:
-        current_sentence += word + ' '
-    # If the word ends with a punctuation mark, add the current sentence to the list and reset it
-    if word.endswith(('.', ',', '!', '?')):
-        sentences.append(current_sentence.strip())
-        current_sentence = ''
-
-# Export the extracted sentences to a text file
-with open('output.txt', 'w') as text_file:
-    for sentence in sentences:
-        text_file.write(sentence + '\n')
-
-
-# Additional information for confirmation
-print("Text extracted from OCR has been exported to output.txt and output.json files.")
+# sentences = []
+# current_sentence = ''
+# for entry in results[0]:
+#     word = entry[0]
+#     # Check if the word is a space
+#     if word == ' ':
+#         current_sentence += word
+#     else:
+#         current_sentence += word + ' '
+#     # If the word ends with a punctuation mark, add the current sentence to the list and reset it
+#     if word.endswith(('.', ',', '!', '?')):
+#         sentences.append(current_sentence.strip())
+#         current_sentence = ''
+#
+# # Export the extracted sentences to a text file
+# with open('output.txt', 'w') as text_file:
+#     for sentence in sentences:
+#         text_file.write(sentence + '\n')
+#
+#
+# # Additional information for confirmation
+# print("Text extracted from OCR has been exported to output.txt and output.json files.")
 
 # __END__ Export the text extracted from OCR to a text file (output.txt) and a JSON file (output.json) --- **Words**
 
@@ -141,6 +149,69 @@ print("Text extracted from OCR has been exported to output.txt and output.json f
 
 # __END__ Export the text extracted from OCR to a text file (output.txt) and a JSON file (output.json) --- **Sentences**
 
+
+# Export the text extracted from OCR to a text file (output.txt) and a JSON file (output.json)
+
+
+
+
+
+# # Convert numpy arrays in results to lists
+# results_serializable = []
+# for entry in results[0]:
+#     text = entry[0]
+#     bbox = entry[1].tolist()  # Convert bounding box ndarray to list
+#     entry_serializable = {'text': text, 'bbox': bbox}
+#     results_serializable.append(entry_serializable)
+#
+# # Convert the OCR results to JSON
+# json_results = json.dumps(results_serializable)
+#
+# # Export the JSON results to a file
+# with open('output.json', 'w') as json_file:
+#     json_file.write(json_results)
+#
+# # Extract text from OCR results
+# text = '\n'.join([entry[0] for entry in results[0]])
+#
+# # Export the extracted text to a text file
+# with open('output.txt', 'w') as text_file:
+#     text_file.write(text)
+
+
+
+
+
+# Initialize a list to store the concatenated sentences
+sentences = []
+current_sentence = ''
+
+# Iterate through each word in the OCR results
+for word, _ in results[0]:
+    # Append the current word to the current sentence
+    current_sentence += word + ' '
+
+    # Check if the word ends with a punctuation mark indicating the end of a sentence
+    if word.endswith(('.', '!', '?')):
+        # Add the current sentence to the list of sentences
+        sentences.append(current_sentence.strip())
+        # Reset the current sentence for the next iteration
+        current_sentence = ''
+
+# If there's any remaining text in the current sentence, add it as well
+if current_sentence:
+    sentences.append(current_sentence.strip())
+
+# Join the sentences into a single string
+text = '\n'.join(sentences)
+
+# Export the extracted text to a text file
+with open('output_sentences.txt', 'w') as text_file:
+    text_file.write(text)
+
+    
+# Additional information for confirmation
+print("Text extracted from OCR has been exported to output.txt and output.json files.")
 
 # # Download the files to local machine
 # from google.colab import files

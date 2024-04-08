@@ -23,7 +23,7 @@ draw = ImageDraw.Draw(image)
 
 
 # Create a PDF document
-pdf_path = '../output_results/output.pdf'
+pdf_path = '../output_results/output_tess__.pdf'
 c = canvas.Canvas(pdf_path, pagesize=letter)
 
 # Define font size and line height

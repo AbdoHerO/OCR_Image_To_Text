@@ -5,7 +5,7 @@ import numpy as np
 # *--------------------------------------------------------* Step 1 *--------------------------------------------------------*
 
 #Reading the image
-img = cv2.imread('../data/mod01.jpg')
+img = cv2.imread('../data/new_bl_croped.jpg')
 
 
         # //  -------------- binary image ------------------ *
@@ -42,7 +42,7 @@ cv2.imshow('Original Image', img)
 cv2.imshow('Sharpened ___', sharpened___)
 cv2.imshow('Processed Image', binary)
 
-cv2.imwrite('../output_results/binary.jpg', binary)
+cv2.imwrite('../data/binary_new_bl.jpg', binary)
 
 
 
