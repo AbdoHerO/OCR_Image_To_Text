@@ -7,13 +7,14 @@ from reportlab.pdfgen import canvas
 # Set the path to the Tesseract executable
 # tess.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 tess.pytesseract.tesseract_cmd = r'C:\Program Files (x86)\Tesseract-OCR\tesseract.exe'
+language = 'eng'  # Change this to the desired language code
 
 # Open the image
-image = Image.open('../data/new_bl_croped.jpg')
+image = Image.open('../data/new_lb_rimini_croped.jpg')
 # image = Image.open('../output_results/sharpened_image_cpd01_croped.jpg')
 
 # Extract text from the image
-text = image_to_string(image)
+text = image_to_string(image, lang=language)
 
 # Split the text by line breaks
 text_lines = text.split('\n')

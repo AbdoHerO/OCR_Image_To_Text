@@ -5,7 +5,7 @@ import numpy as np
 # *--------------------------------------------------------* Step 1 *--------------------------------------------------------*
 
 #Reading the image
-img = cv2.imread('../data/new_bl_croped.jpg')
+img = cv2.imread('../data/new_lb_rimini_croped_border.jpg')
 
 
         # //  -------------- binary image ------------------ *
@@ -32,7 +32,8 @@ sharpened4 = cv2.addWeighted(img, 7.5, gaussian_blur, -6.5, 0)
 sharpened___ = cv2.addWeighted(img, 5.5, gaussian_blur, -4.5, 0)
 
 # Save the sharpened image
-cv2.imwrite('../output_results/sharpened_image.jpg', sharpened___)
+cv2.imwrite('../output_results/binary_remini_new_bl.jpg', binary)
+cv2.imwrite('../output_results/sharpened__remini_new_bl.jpg', sharpened___)
 
 #Showing the sharpened Images
 # cv2.imshow('Sharpened 1', sharpened1)
@@ -46,7 +47,6 @@ cv2.imwrite('../data/binary_new_bl.jpg', binary)
 
 
 
-
 # *--------------------------------------------------------* Step 2 *--------------------------------------------------------*
 
 img_to_transformer_step_2 = cv2.imread('../output_results/sharpened_image.jpg')
@@ -54,8 +54,11 @@ rows, cols = img_to_transformer_step_2.shape[:2]
 
 #Bilateral filtring (Reduction of noise + Preserving of edges)
 output_bil = cv2.bilateralFilter(img_to_transformer_step_2, 5,6,6)
+cv2.imwrite('../output_results/Bilateral__remini_new_bl.jpg', output_bil)
 
 cv2.imshow('Bilateral Filter', output_bil)
+
+
 
 
 # *--------------------------------------------------------* Show all Windows *--------------------------------------------------------*
