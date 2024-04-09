@@ -5,16 +5,14 @@ from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 
 # Set the path to the Tesseract executable
-# tess.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-tess.pytesseract.tesseract_cmd = r'C:\Program Files (x86)\Tesseract-OCR\tesseract.exe'
-# language = 'eng'  # Change this to the desired language code
+tess.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 # Open the image
-image = Image.open('../data/new_bl.jpg')
+image = Image.open('../data/new_bl_croped.jpg')
 # image = Image.open('../output_results/sharpened_image_cpd01_croped.jpg')
 
 # Extract text from the image
-text = image_to_string(image) #, lang=language
+text = image_to_string(image)
 
 # Split the text by line breaks
 text_lines = text.split('\n')
@@ -24,7 +22,7 @@ draw = ImageDraw.Draw(image)
 
 
 # Create a PDF document
-pdf_path = '../output_results/output_tess__old.pdf'
+pdf_path = '../output_results/output_croped.pdf'
 c = canvas.Canvas(pdf_path, pagesize=letter)
 
 # Define font size and line height
@@ -35,7 +33,7 @@ line_height = 1.5 * font_size
 y_position = 700  # Starting y-position for text in PDF
 
 # Print and write each line to a file with line breaks
-with open('../output_results/output_tess.txt', 'w', encoding='utf-8') as file:
+with open('../output_results/output_tess.txt', 'w') as file:
     for line in text_lines:
         print(line)
         file.write(line + '\n')
@@ -109,5 +107,3 @@ print("Recognized text saved as:", text_path)
 # text=repr(text)
 # file.write(text)
 # file.close
-
-
