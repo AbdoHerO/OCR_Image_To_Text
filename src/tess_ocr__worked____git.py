@@ -8,7 +8,8 @@ from reportlab.pdfgen import canvas
 tess.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 # Open the image
-image = Image.open('../data/new_bl_croped.jpg')
+img_name = 'new_bl_croped_worked_border'
+image = Image.open('../data/new_bl_rimini/'+img_name+'.jpg')
 # image = Image.open('../output_results/sharpened_image_cpd01_croped.jpg')
 
 # Extract text from the image
@@ -22,7 +23,7 @@ draw = ImageDraw.Draw(image)
 
 
 # Create a PDF document
-pdf_path = '../output_results/output_croped.pdf'
+pdf_path = '../output_results_tesseract_testing/'+img_name+'.pdf'
 c = canvas.Canvas(pdf_path, pagesize=letter)
 
 # Define font size and line height
@@ -33,7 +34,7 @@ line_height = 1.5 * font_size
 y_position = 700  # Starting y-position for text in PDF
 
 # Print and write each line to a file with line breaks
-with open('../output_results/output_tess.txt', 'w') as file:
+with open('../output_results_tesseract_testing/'+img_name+'_text.txt', 'w') as file:
     for line in text_lines:
         print(line)
         file.write(line + '\n')
@@ -65,18 +66,18 @@ for line in text_lines:
 
 
 # Save the image with bounding boxes and text
-image_with_boxes_path = '../output_results/mod01_with_boxes.jpg'
+image_with_boxes_path = '../output_results_tesseract_testing/'+img_name+'.jpg'
 image.save(image_with_boxes_path)
 
 # Save the PDF document
 c.save()
 
 # Display the image
-image.show()
+# image.show()
 
 # Print and write the recognized text to a file
-text_path = '../output_results/output_tess.txt'
-print("Bounding boxes and text drawn on the image. Image saved as:", image_with_boxes_path)
+text_path = '../output_results_tesseract_testing/'+img_name+'_text.txt'
+# print("Bounding boxes and text drawn on the image. Image saved as:", image_with_boxes_path)
 print("Recognized text saved as:", text_path)
 
 
