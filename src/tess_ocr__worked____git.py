@@ -8,7 +8,7 @@ from reportlab.pdfgen import canvas
 tess.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 # Open the image
-img_name = 'new_bl_croped_worked_border'
+img_name = 'new_bl_croped'
 image = Image.open('../data/new_bl_rimini/'+img_name+'.jpg')
 # image = Image.open('../output_results/sharpened_image_cpd01_croped.jpg')
 
@@ -23,7 +23,7 @@ draw = ImageDraw.Draw(image)
 
 
 # Create a PDF document
-pdf_path = '../output_results_tesseract_testing/'+img_name+'.pdf'
+pdf_path = '../output_results_tesseract_testing/'+img_name+'______.pdf'
 c = canvas.Canvas(pdf_path, pagesize=letter)
 
 # Define font size and line height
