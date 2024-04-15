@@ -14,8 +14,9 @@ for i in range(1):
     # img_name = 'BLS_' + str(i + 1) + '_Processed'
     # image = Image.open('../output_models/' + img_name + '.jpg')
     # img_name = 'BLS_' + str(i + 1)
-    img_name = 'BLS_1_croped'
-    image = Image.open('../data/models/' + img_name + '.jpg')
+    img_name = 'BLS_1_croped_Processed'
+    image = Image.open('../output_models/' + img_name + '.jpg')
+    # image = Image.open('../data/models/' + img_name + '.jpg')
 
     # Extract text from the image
     text = image_to_string(image)
