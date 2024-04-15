@@ -8,7 +8,7 @@ from matplotlib import pyplot as plt
 
 # ------------- Single Image --------------
 # Load the image
-image_name = 'BLS_1_croped'
+image_name = 'BLS_8_croped'
 original_image = cv2.imread('../data/models/' + image_name + '.jpg')
 
 
