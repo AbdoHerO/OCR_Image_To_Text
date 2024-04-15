@@ -66,9 +66,9 @@ def deskew(image):
 
 def noise_removal(image):
     import numpy as np
-    kernel = np.ones((2, 1), np.uint8)
+    kernel = np.ones((1, 1), np.uint8)
     image = cv2.dilate(image, kernel, iterations=1)
-    kernel = np.ones((2, 1), np.uint8)
+    kernel = np.ones((1, 1), np.uint8)
     image = cv2.erode(image, kernel, iterations=1)
     image = cv2.morphologyEx(image, cv2.MORPH_CLOSE, kernel)
     image = cv2.medianBlur(image, 3)
@@ -78,7 +78,7 @@ def noise_removal(image):
 def thin_font(image):
     import numpy as np
     image = cv2.bitwise_not(image)
-    kernel = np.ones((1, 3), np.uint8)  # should be (2,2)
+    kernel = np.ones((2, 2), np.uint8)  # should be (2,2)
     image = cv2.erode(image, kernel, iterations=1)
     image = cv2.bitwise_not(image)
     return (image)
@@ -87,7 +87,7 @@ def thin_font(image):
 def thick_font(image):
     import numpy as np
     image = cv2.bitwise_not(image)
-    kernel = np.ones((2, 2), np.uint8)
+    kernel = np.ones((3, 3), np.uint8)
     image = cv2.dilate(image, kernel, iterations=1)
     image = cv2.bitwise_not(image)
     return (image)
@@ -110,7 +110,7 @@ gray_image = cv2.cvtColor(original_image, cv2.COLOR_RGB2GRAY)  # cv2.COLOR_BGR2G
 
 
 # 3 - Threshold - Apply thresholding to create a binary image
-_, binary_image = cv2.threshold(gray_image, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)  # cv2.THRESH_OTSU
+_, binary_image = cv2.threshold(gray_image, 210, 255, cv2.THRESH_BINARY )  # cv2.THRESH_OTSU
 
 # 4 - Noise Removal
 no_noise = noise_removal(binary_image)
