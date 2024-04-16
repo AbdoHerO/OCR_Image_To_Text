@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 
 # Directory containing the images
-input_dir_path = Path("../data/models/with_camscanner")
+input_dir_path = Path("../data/model_camscanner")
 output_dir_path = Path("../data/output_cropage")
 
 
