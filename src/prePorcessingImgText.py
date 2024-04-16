@@ -132,7 +132,7 @@ def processing_the_img(image):
 
     eroded_image = thin_font(img)
 
-    return eroded_image
+    return no_noise
     # plt.imshow(cv2.cvtColor(eroded_image, cv2.COLOR_GRAY2RGB))
     # plt.show()
 
@@ -145,7 +145,7 @@ for folder_name in os.listdir(main_directory):
     if os.path.isdir(folder_path):
 
         # Create a corresponding output folder
-        output_folder_path = os.path.join(output_directory, folder_name + '__Processed')
+        output_folder_path = os.path.join(output_directory, folder_name + '_processed')
         if not os.path.exists(output_folder_path):
             os.makedirs(output_folder_path)
 
@@ -159,12 +159,14 @@ for folder_name in os.listdir(main_directory):
                 preprocessed_image = processing_the_img(image)
 
                 # Save the processed image in the new folder with the modified name
-                processed_image_path = os.path.join(output_folder_path, image_name.split('.')[0] + '__Processed.jpg')
+                processed_image_path = os.path.join(output_folder_path, image_name.split('.')[0] + '_processed.jpg')
                 cv2.imwrite(processed_image_path, preprocessed_image)
 
-                # Sshow the processed image
-                # plt.imshow(cv2.cvtColor(preprocessed_image, cv2.COLOR_BGR2RGB))
-                # plt.show()
+                # Show the processed image
+                print(image_name)
+                if image_name == 'BLS_10_table.jpg':
+                    plt.imshow(cv2.cvtColor(preprocessed_image, cv2.COLOR_BGR2RGB))
+                    plt.show()
 
 
 
