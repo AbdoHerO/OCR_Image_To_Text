@@ -13,7 +13,7 @@ for i in range(4):
     index = ["1", "3", "4" , "8"]
 
     # Open the image
-    img_name = 'BLS_' + index[i] + '_croped_header' + '_Processed'
+    img_name = 'BLS_' + index[i] + '_croped_labels' + '_Processed'
     image = Image.open('../output_models/' + img_name + '.jpg')
     # img_name = 'BLS_' + str(i + 1)
     # img_name = 'BLS_8_croped_Processed'
