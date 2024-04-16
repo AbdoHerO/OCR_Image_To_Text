@@ -10,7 +10,8 @@ tess.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 # Define your main directory containing the image folders
 main_directory = "../data/output_cropage_Processed"
-
+main_directory = os.getcwd()
+#
 # Define your output directory
 output_directory = "../data/output_cropage_OCR"
 
