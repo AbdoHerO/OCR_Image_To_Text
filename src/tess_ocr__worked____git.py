@@ -8,14 +8,14 @@ from reportlab.pdfgen import canvas
 tess.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 #Reading the images Processed
-for i in range(1):
+for i in range(8):
 
     # Open the image
-    # img_name = 'BLS_' + str(i + 1) + '_Processed'
-    # image = Image.open('../output_models/' + img_name + '.jpg')
+    img_name = 'BLS_' + str(i + 1) + '_Processed'
+    image = Image.open('../output_models/' + img_name + '.jpg')
     # img_name = 'BLS_' + str(i + 1)
-    img_name = 'BLS_1_croped'
-    image = Image.open('../data/models/' + img_name + '.jpg')
+    # img_name = 'BLS_1_croped'
+    # image = Image.open('../data/models/' + img_name + '.jpg')
 
     # Extract text from the image
     text = image_to_string(image)
