@@ -28,6 +28,7 @@ my_endpoint = mindee_client.create_endpoint(
 # Load a file from disk
 input_doc = mindee_client.source_from_path("../data/new_bl.jpg")
 
+
 # Parse the file.
 # The endpoint must be specified since it cannot be determined from the class.
 result = mindee_client.parse(
