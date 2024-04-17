@@ -10,12 +10,13 @@ from pytesseract import image_to_string
 import pytesseract as tess
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
+from pathlib import Path
 
 # Set the path to the Tesseract executable
 tess.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 # Directory containing the images
-image_file ="../data/model_camscanner/BLS_10.jpg"
+image_file ="../data/image2.jpg"
 output_dir_path = Path("../data/complete_ocr_output")
 output_ocr_final_path = Path("../data/complete_ocr_output/OCR output final")
 
@@ -149,7 +150,7 @@ def processing_the_img(image):
 
 
     # 3 - Threshold - Apply thresholding to create a binary image
-    _, binary_image = cv2.threshold(gray_image, 210, 255, cv2.THRESH_BINARY )  # cv2.THRESH_OTSU
+    _, binary_image = cv2.threshold(gray_image, 180, 255, cv2.THRESH_BINARY )  # cv2.THRESH_OTSU
 
     # 4 - Noise Removal
     no_noise = noise_removal(binary_image)

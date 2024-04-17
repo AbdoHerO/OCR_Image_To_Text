@@ -12,7 +12,7 @@ endobj
 endobj
 3 0 obj
 <<
-/Contents 7 0 R /MediaBox [ 0 0 612 792 ] /Parent 6 0 R /Resources <<
+/Contents 8 0 R /MediaBox [ 0 0 612 792 ] /Parent 7 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -22,63 +22,66 @@ endobj
 endobj
 4 0 obj
 <<
-/PageMode /UseNone /Pages 6 0 R /Type /Catalog
+/Contents 9 0 R /MediaBox [ 0 0 612 792 ] /Parent 7 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
 >>
 endobj
 5 0 obj
 <<
-<<<<<<< HEAD:output_results_tesseract_testing/BLS_1_croped______.pdf
-<<<<<<< HEAD
-/Author (anonymous) /CreationDate (D:20240415132433+00'00') /Creator (ReportLab PDF Library - www.reportlab.com) /Keywords () /ModDate (D:20240415132433+00'00') /Producer (ReportLab PDF Library - www.reportlab.com) 
-=======
-/Author (anonymous) /CreationDate (D:20240415144547+00'00') /Creator (ReportLab PDF Library - www.reportlab.com) /Keywords () /ModDate (D:20240415144547+00'00') /Producer (ReportLab PDF Library - www.reportlab.com) 
->>>>>>> 62218b460e853c1772f41b2791b21ae57fef186d
-=======
-/Author (anonymous) /CreationDate (D:20240416172925+00'00') /Creator (ReportLab PDF Library - www.reportlab.com) /Keywords () /ModDate (D:20240416172925+00'00') /Producer (ReportLab PDF Library - www.reportlab.com) 
->>>>>>> 779109bb306b7114663b07bf0050d995ccf60e70:data/complete_ocr_output/OCR output final/BL_table__ocr/BL_table_croped_processed_ocr.pdf
-  /Subject (unspecified) /Title (untitled) /Trapped /False
+/PageMode /UseNone /Pages 7 0 R /Type /Catalog
 >>
 endobj
 6 0 obj
 <<
-/Count 1 /Kids [ 3 0 R ] /Type /Pages
+/Author (anonymous) /CreationDate (D:20240417104004+00'00') /Creator (ReportLab PDF Library - www.reportlab.com) /Keywords () /ModDate (D:20240417104004+00'00') /Producer (ReportLab PDF Library - www.reportlab.com) 
+  /Subject (unspecified) /Title (untitled) /Trapped /False
 >>
 endobj
 7 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 82
+/Count 2 /Kids [ 3 0 R 4 0 R ] /Type /Pages
+>>
+endobj
+8 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 866
 >>
 stream
-GapQh0E=F,0U\H3T\pNYT^QKk?tc>IP,;W#U1^23ihPEM_M(M8&8HltJV(G3R6h2+PRoF.S,sK,Lgh"X~>endstream
+GatU2?#S1W&:ErM=Pa*oik;tsf;"O7>RNW:m7Sb$]GN%F881J]+r0Y.=o00Q&-\Vo.#DKR1UAmLlP"gH(B*u_4i#j'[h9f/Qqni<7UU8`k2IK7`;njAKRNo5&!KGRkr$]V)6=qS>NLe?""Y+\i<N?LkM,Ct24-%)hDcXYW'ba?8)g0g`U9QhfM31pKpj3?6)[$uN4eQ[]YAl8f7_RT;\2g0l2%Zu478-"2pT'%0XuM_n(YI8*QG3C#e:lmW56iVSsQLjX>Ta1#7ApBf*r!"')=2Z4Fq<!q<k89];9sm/Ia!g.uX[@]e89Hb7C`:(r.n"F^pS^?s$Be0>#YH$*itrFq!HWi:hLjrX)HR;8Cf>?B,+8FLP9D;+t#%D2KYjH(N82<jYOD-Q]-"+BKMAX;8o\&4JJZDVRR^bNeA`3AUtO[Rc.'Tf4l?$>]jkT[O:rIJ4.@faN,.TXiM:l#k"?1cI6:70W;-%;[>77ZfKi(WI&oiaLHqJ*.ntJ\o^[5kG:W:I6'.h`r7U"!0IdW&Sa>6%q4`m6i-_3LW[=C[T?>PIIK`XHRe,+m76<T8hh:6kZ7M;?77ZL1`@6S4<--gqLG_B]Q6FZEaCiU2?NY+(@'Y6+YC/69AP;9t8;=;C!]e"\c%iIXdO$<KC>M19qc-^l4bT;"$Hpj/BV$kWVqnQ_u]]WffS&/g$#D&fQtID/@<+*9cA6Nf$pg3j6#fYRCV"?[]`M\naHS(dfG$#>)k]YB=ju<h5E;[[TKD^>+n`Oa@]bOM?(Z;Prm#jPK,f"tr/n$++%$]5RHB#n3h:<QptQ@X$]rCYPR7W]DYPF31IMY?&6K9Qe)."4)epJbum[(7ohb7)PNl_So;o"L4m~>endstream
+endobj
+9 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 111
+>>
+stream
+GapQh0E=F,0U\H3T\pNYT^QKk?tc>IP,;W#U1^23ihPEM_M(M8&8HltJV(G3R6jHIJqeiE^4EQ'Ob'3oVF!h>6AQB`7Mo?[N.C1jhuWmh7j+]~>endstream
 endobj
 xref
-0 8
+0 10
 0000000000 65535 f 
 0000000073 00000 n 
 0000000104 00000 n 
 0000000211 00000 n 
 0000000404 00000 n 
-0000000472 00000 n 
-0000000768 00000 n 
-0000000827 00000 n 
+0000000597 00000 n 
+0000000665 00000 n 
+0000000961 00000 n 
+0000001026 00000 n 
+0000001982 00000 n 
 trailer
 <<
 /ID 
-<<<<<<< HEAD:output_results_tesseract_testing/BLS_1_croped______.pdf
-<<<<<<< HEAD
-[<46b911b9baa03b6f99bbc350aaa80b4f><46b911b9baa03b6f99bbc350aaa80b4f>]
-=======
-[<66e5b4a718350633da122e6224b8f4d1><66e5b4a718350633da122e6224b8f4d1>]
->>>>>>> 62218b460e853c1772f41b2791b21ae57fef186d
-=======
-[<a7395b84bb4299e34cc9cc7c3adeb3e1><a7395b84bb4299e34cc9cc7c3adeb3e1>]
->>>>>>> 779109bb306b7114663b07bf0050d995ccf60e70:data/complete_ocr_output/OCR output final/BL_table__ocr/BL_table_croped_processed_ocr.pdf
+[<9f02b96c6647b876fee0abefd375e4cd><9f02b96c6647b876fee0abefd375e4cd>]
 % ReportLab generated PDF document -- digest (http://www.reportlab.com)
 
-/Info 5 0 R
-/Root 4 0 R
-/Size 8
+/Info 6 0 R
+/Root 5 0 R
+/Size 10
 >>
 startxref
-998
+2183
 %%EOF

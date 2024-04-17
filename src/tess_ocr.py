@@ -1,3 +1,163 @@
+from PIL import Image, ImageDraw
+from pytesseract import image_to_string
+import pytesseract as tess
+from reportlab.lib.pagesizes import letter
+from reportlab.pdfgen import canvas
+import os
+import re
+import json
+
+def debug_structure_data(ocr_data):
+
+    structured_data = []
+    # Regular expression pattern to match the line items
+    pattern = re.compile(
+        r'(\d+)\s*(\d+)?\s*\|\s*([^|]+?)\s*([\d,]+)\s*\|\s*([a-zA-Z0-9]+)\s*(\d{1,2}/\d{1,2}/\d{4})'
+    )
+
+    # Find all matches of the pattern in the OCR data
+    matches = pattern.findall(ocr_data)
+
+    # Create a list of dictionaries with structured data
+    structured_data = [
+        {
+            'ordered_quantity': match[0] if match[1] else '0' ,
+            'delivered_quantity': match[1] if match[1] else match[0],
+            # If delivered quantity is missing, use ordered quantity
+            'item_name': match[2].strip(),
+            'price': match[3],
+            'lot_number': match[4],
+            # Correcting potential OCR date errors, assuming day and month should not exceed 12
+            'date': re.sub(r'(\d{1,2})/(\d{1,2})/(\d{4})', lambda x: '{}/{}/{}'.format(
+                min(int(x.group(1)), 12), min(int(x.group(2)), 12), x.group(3)), match[5])
+        }
+        for match in matches if match[2].strip()  # Only include matches with a non-empty item name
+    ]
+
+    return structured_data
+
+
+#Reading the images Processed
+
+img_name = 'new_bl_scannee'
+# image = Image.open('../data/complete_ocr_output/BL_table_croped_processed.jpg')
+image = Image.open('../data/new_bl_croped.jpg')
+
+# Extract text from the image
+text = image_to_string(image)
+
+
+# Clean and structure the OCR extracted text
+structured_data_list = debug_structure_data(text)
+
+# Convert the structured data to JSON
+json_data = json.dumps(structured_data_list, indent=4, ensure_ascii=False)
+
+# Output the JSON data
+print(structured_data_list)
+
+
+# Split the text by line breaks
+text_lines = text.split('\n')
+
+# Create an ImageDraw object
+draw = ImageDraw.Draw(image)
+
+
+# Create a PDF document
+pdf_path = '../'+img_name+'______.pdf'
+c = canvas.Canvas(pdf_path, pagesize=letter)
+
+# Define font size and line height
+font_size = 12
+line_height = 1.5 * font_size
+
+# Iterate over each line to draw bounding boxes and text, and add text to PDF
+y_position = 700  # Starting y-position for text in PDF
+
+# Track the current page
+current_page = 0
+
+# Print and write each line to a file with line breaks
+with open('../'+img_name+'_text.txt', 'w') as file:
+    for line in text_lines:
+        print(line)
+        file.write(line + '\n')
+
+        # Add the text to the PDF document
+        c.setFont("Helvetica", font_size)
+        c.drawString(50, y_position, line )
+        y_position -= line_height
+
+# Parse each line and draw bounding boxes
+for line in text_lines:
+    # Skip empty lines
+    if not line.strip():
+        continue
+
+    if y_position <= 0:
+        # Add a new page
+        c.showPage()
+        current_page += 1
+        y_position = 700
+
+    # Split line into character, left, top, right, bottom
+    parts = line.split()
+    try:
+        character = parts[0]
+        left, top, right, bottom = map(int, parts[1:5])
+    except ValueError:
+        # Skip lines that don't contain valid bounding box information
+        continue
+
+    # Draw bounding box and text
+    draw.rectangle([(left, top), (right, bottom)], outline='red')
+    draw.text((left, top), character, fill='red')
+
+    y_position -= line_height
+
+
+
+# Save the image with bounding boxes and text
+image_with_boxes_path = '../'+img_name+'.jpg'
+image.save(image_with_boxes_path)
+
+# Save the PDF document
+c.save()
+
+# Display the image
+# image.show()
+
+# Print and write the recognized text to a file
+text_path = '../'+img_name+'_text.txt'
+# print("Bounding boxes and text drawn on the image. Image saved as:", image_with_boxes_path)
+print("Recognized text saved as:", text_path)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# _____OCR Of multip Files ______
+
 # from PIL import Image, ImageDraw
 # from pytesseract import image_to_string
 # import pytesseract as tess
@@ -107,166 +267,3 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# _____ODL ______
-from PIL import Image, ImageDraw
-from pytesseract import image_to_string
-import pytesseract as tess
-from reportlab.lib.pagesizes import letter
-from reportlab.pdfgen import canvas
-import os
-import re
-import json
-
-# Define a function to clean and structure the extracted text
-# Redefine the function for debugging
-def debug_structure_data(text):
-    lines = text.split('\n')
-    # item_pattern = re.compile(r'^(\d+\s)?([A-Z\s]+BT/\s?\d+\w+).*?(\d{7})$')
-    item_pattern = re.compile(r'^(\d+)?\s*([A-Za-z0-9\s]+BT/\s*\d+.*?)(\d{7})')
-    date_pattern = re.compile(r'\d{2}/\d{2}/\d{4}')
-
-    structured_data = []
-
-    for line in lines:
-        item_match = item_pattern.match(line.strip())
-        date_match = date_pattern.findall(line)
-
-        # Debug print statements
-        print(f"Line: {line}")
-        if item_match:
-            print(f"Item match found: {item_match.groups()}")
-            quantity_delivered, item_name, lot_number = item_match.groups()
-            quantity_delivered = quantity_delivered.strip() if quantity_delivered else '0'
-            item_info = {
-                'item_name': item_name.strip(),
-                'lot_number': lot_number,
-                'quantity_delivered': int(quantity_delivered),
-                'expiration_dates': []
-            }
-            structured_data.append(item_info)
-        elif date_match:
-            print(f"Date match found: {date_match}")
-            if structured_data:
-                structured_data[-1]['expiration_dates'].extend(date_match)
-            else:
-                print("Date found but no item to attach to.")
-        else:
-            print("No match found.")
-
-    return structured_data
-
-#Reading the images Processed
-
-img_name = 'new_bl_scannee'
-image = Image.open('../data/image2.jpg')
-
-# Extract text from the image
-text = image_to_string(image)
-
-
-# Clean and structure the OCR extracted text
-structured_data_list = debug_structure_data(text)
-
-# Convert the structured data to JSON
-json_data = json.dumps(structured_data_list, indent=2, ensure_ascii=False)
-
-# Output the JSON data
-print(structured_data_list)
-
-
-# Split the text by line breaks
-text_lines = text.split('\n')
-
-# Create an ImageDraw object
-draw = ImageDraw.Draw(image)
-
-
-# Create a PDF document
-pdf_path = '../'+img_name+'______.pdf'
-c = canvas.Canvas(pdf_path, pagesize=letter)
-
-# Define font size and line height
-font_size = 12
-line_height = 1.5 * font_size
-
-# Iterate over each line to draw bounding boxes and text, and add text to PDF
-y_position = 700  # Starting y-position for text in PDF
-
-# Track the current page
-current_page = 0
-
-# Print and write each line to a file with line breaks
-with open('../'+img_name+'_text.txt', 'w') as file:
-    for line in text_lines:
-        print(line)
-        file.write(line + '\n')
-
-        # Add the text to the PDF document
-        c.setFont("Helvetica", font_size)
-        c.drawString(50, y_position, line )
-        y_position -= line_height
-
-# Parse each line and draw bounding boxes
-for line in text_lines:
-    # Skip empty lines
-    if not line.strip():
-        continue
-
-    if y_position <= 0:
-        # Add a new page
-        c.showPage()
-        current_page += 1
-        y_position = 700
-
-    # Split line into character, left, top, right, bottom
-    parts = line.split()
-    try:
-        character = parts[0]
-        left, top, right, bottom = map(int, parts[1:5])
-    except ValueError:
-        # Skip lines that don't contain valid bounding box information
-        continue
-
-    # Draw bounding box and text
-    draw.rectangle([(left, top), (right, bottom)], outline='red')
-    draw.text((left, top), character, fill='red')
-
-    y_position -= line_height
-
-
-
-# Save the image with bounding boxes and text
-image_with_boxes_path = '../'+img_name+'.jpg'
-image.save(image_with_boxes_path)
-
-# Save the PDF document
-c.save()
-
-# Display the image
-# image.show()
-
-# Print and write the recognized text to a file
-text_path = '../output_results_tesseract_testing/'+img_name+'_text.txt'
-# print("Bounding boxes and text drawn on the image. Image saved as:", image_with_boxes_path)
-print("Recognized text saved as:", text_path)
